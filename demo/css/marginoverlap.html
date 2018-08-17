@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边距重叠以及解决方法</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .top{
+            background: #0ff;
+            height:100px;
+            margin-bottom:30px;
+        }
+        .bottom{
+            height:100px;
+            margin-top:50px;
+            background: #ddd;
+        }
+    </style>
+</head>
+    <body>
+        <!-- 边距重叠 -->
+        <div>边距重叠</div>
+        <section class="top">
+            <h1>上</h1>
+            margin-bottom:30px;
+        </section>
+        <section class="bottom">
+            <h1>下</h1>
+            margin-top:50px;
+        </section>
+        <!-- 边距重叠解决方法 -->
+        <div>边距重叠解决方法</div>
+        <section class="top">
+            <h1>上</h1>
+            margin-bottom:30px;
+        </section>
+        <div style="overflow: hidden;">
+            <section class="bottom">
+                <h1>下</h1>
+                margin-top:50px;
+            </section>
+        </div>
+    </body>
+</html>
